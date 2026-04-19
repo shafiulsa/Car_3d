@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Services from './sections/Services';
+import Showcase from './sections/Showcase';
+import Pricing from './sections/Pricing';
 import About from './sections/About';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
@@ -14,6 +16,8 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <Showcase />
+        <Pricing />
         <About />
         <Testimonials />
         <Contact />
