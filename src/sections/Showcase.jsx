@@ -1,3 +1,5 @@
+import React, { useState, Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, Environment, ContactShadows } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
 import Model from '../components/Model';
