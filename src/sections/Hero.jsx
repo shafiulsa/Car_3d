@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, Environment, ContactShadows } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import Model from '../components/Model';
+import Loader from '../components/Loader';
 
 const Hero = () => {
   return (
@@ -36,10 +35,9 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* Right Content - 3D Canvas */}
       <div className="flex-1 w-full h-[400px] md:h-screen cursor-grab active:cursor-grabbing">
         <Canvas shadows camera={{ position: [0, 0, 5], fov: 35 }}>
-          <Suspense fallback={null}>
+          <Suspense fallback={<Loader />}>
             <Stage environment="city" intensity={0.5} contactShadow={false}>
               <Model path="/models/main.glb" scale={0.8} />
             </Stage>

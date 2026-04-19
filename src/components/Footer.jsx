@@ -1,5 +1,6 @@
 import React from 'react';
-import { Twitter, Instagram, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -14,16 +15,16 @@ const Footer = () => {
           </p>
           <div className="flex gap-4">
             <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
-              <Twitter size={18} />
+              <FaTwitter size={18} />
             </a>
             <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
-              <Instagram size={18} />
+              <FaInstagram size={18} />
             </a>
             <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
-              <Linkedin size={18} />
+              <FaLinkedinIn size={18} />
             </a>
             <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
-              <Github size={18} />
+              <FaGithub size={18} />
             </a>
           </div>
         </div>

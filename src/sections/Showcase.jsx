@@ -1,8 +1,7 @@
-import React, { useState, Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, Environment, ContactShadows } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
 import Model from '../components/Model';
+import Loader from '../components/Loader';
 
 const models = [
   { id: 1, name: 'Precision Sedan', path: '/models/car 1.glb', speed: '240 km/h', power: '350 HP' },
@@ -26,7 +25,7 @@ const Showcase = () => {
           {/* 3D Viewer */}
           <div className="flex-[2] w-full h-[500px] bg-slate-800/20 rounded-3xl overflow-hidden border border-slate-700/50 relative">
             <Canvas shadows camera={{ position: [0, 0, 5], fov: 35 }}>
-              <Suspense fallback={null}>
+              <Suspense fallback={<Loader />}>
                 <Stage environment="city" intensity={0.5} contactShadow={false}>
                   <Model key={selectedModel.id} path={selectedModel.path} scale={0.8} />
                 </Stage>
